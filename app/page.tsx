@@ -31,9 +31,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
           </div>
 
-          {/* Hero Content - positioned at bottom with generous top clearance */}
-          <div className="absolute inset-0 z-10 flex items-end">
-            <div className="container-wide section-padding pb-24 md:pb-32 pt-32 md:pt-40">
+          {/* Hero Content - centered on large screens, bottom-aligned on smaller */}
+          <div className="absolute inset-0 z-10 flex items-end lg:items-center">
+            <div className="container-wide section-padding pb-24 md:pb-32 pt-32 md:pt-40 lg:py-0">
               <FadeIn delay={0.2}>
                 <p className="caption-text text-white/80 mb-4">Southern Utah & Beyond</p>
               </FadeIn>
