@@ -18,7 +18,7 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-screen flex flex-col justify-end">
+        <section className="relative h-screen">
           {/* Background Image with Parallax */}
           <div className="absolute inset-0 z-0">
             <ParallaxImage
@@ -31,11 +31,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
           </div>
 
-          {/* Spacer to prevent overlap with header */}
-          <div className="h-24 md:h-28 flex-shrink-0" />
-
-          {/* Hero Content */}
-          <div className="relative z-10 w-full section-padding pb-20 md:pb-32 mt-auto">
+          {/* Hero Content - positioned at bottom with safe top clearance */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 section-padding pb-20 md:pb-32" style={{ top: '35%' }}>
+            <div className="container-wide h-full flex flex-col justify-end">
             <div className="container-wide">
               <FadeIn delay={0.2}>
                 <p className="caption-text text-white/80 mb-4">Southern Utah & Beyond</p>
@@ -58,6 +56,7 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
+          </div>
           </div>
 
           {/* Scroll Indicator */}
