@@ -12,7 +12,6 @@ const menuItems = [
   { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Careers', href: '/careers' },
   { label: 'Shop', href: '/shop' },
   { label: 'Inquire', href: '/inquire' },
 ]
@@ -20,6 +19,12 @@ const menuItems = [
 const serviceItems = [
   { label: 'Residential', href: '/services/residential' },
   { label: 'Commercial', href: '/services/commercial' },
+]
+
+const aboutItems = [
+  { label: 'Our Story', href: '/about' },
+  { label: 'Meet the Team', href: '/about/team' },
+  { label: 'Careers', href: '/careers' },
 ]
 
 export default function FullscreenMenu({ onClose }: FullscreenMenuProps) {
@@ -80,7 +85,23 @@ export default function FullscreenMenu({ onClose }: FullscreenMenuProps) {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div className="mt-8">
+              <p className="caption-text mb-4">About</p>
+              <div className="flex flex-col gap-2">
+                {aboutItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={onClose}
+                    className="font-sans text-lg text-stone hover:text-charcoal transition-colors duration-300"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8">
               <p className="caption-text mb-4">Location</p>
               <p className="font-sans text-stone">St. George, Utah</p>
               <p className="font-sans text-stone text-sm mt-1">Serving Southern Utah & Beyond</p>
