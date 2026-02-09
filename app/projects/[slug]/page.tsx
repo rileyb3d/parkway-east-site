@@ -212,11 +212,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Before/After Section - for renovation/refresh projects like Stella */}
         {project.beforeAfter && project.beforeAfter.length > 0 && (
-          <section className="section-padding">
-            <div className="container-wide">
-              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-16">
-                The Transformation
-              </KineticHeading>
+          <section className="py-16 md:py-24 lg:py-32">
+            <div className="max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">
               {project.beforeAfter.map((comparison, index) => (
                 <BeforeAfterSection
                   key={index}
@@ -233,11 +230,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Room-organized Gallery - for custom home projects */}
         {project.rooms && project.rooms.length > 0 && (
-          <section className="section-padding">
-            <div className="container-wide">
-              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-16">
-                Explore the Home
-              </KineticHeading>
+          <section className="py-16 md:py-24 lg:py-32">
+            <div className="max-w-[1800px] mx-auto px-4 md:px-8 lg:px-12">
               {project.rooms.map((room, index) => (
                 <RoomGallery
                   key={index}
@@ -252,11 +246,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Additional Detail Images - for Stella Project */}
         {project.beforeAfter && project.images.length > 0 && (
-          <section className="section-padding bg-warm-100">
-            <div className="container-wide">
-              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
-                Details
-              </KineticHeading>
+          <section className="py-16 md:py-24 lg:py-32 bg-warm-50">
+            <div className="max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12">
+              <FadeIn className="mb-12 md:mb-16">
+                <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Details</h2>
+              </FadeIn>
               <ProjectGallery images={project.images} />
             </div>
           </section>
