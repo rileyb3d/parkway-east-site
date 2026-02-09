@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import GhostHeader from '@/components/navigation/GhostHeader'
 import FadeIn from '@/components/animations/FadeIn'
 import KineticHeading from '@/components/animations/KineticHeading'
@@ -15,7 +16,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <GhostHeader />
+      <GhostHeader variant="light" />
       
       <main>
         {/* Hero */}
@@ -174,6 +175,17 @@ export default function AboutPage() {
                 </FadeIn>
               ))}
             </div>
+
+            <FadeIn delay={0.4}>
+              <div className="text-center mt-12">
+                <Link
+                  href="/about/team"
+                  className="inline-block text-charcoal hover:text-stone transition-colors duration-300 font-sans tracking-wide uppercase text-sm"
+                >
+                  View Full Team →
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
@@ -220,12 +232,20 @@ export default function AboutPage() {
                   </p>
                 </FadeIn>
                 <FadeIn delay={0.3}>
-                  <a
-                    href="mailto:careers@parkwayeastdesign.com"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-charcoal text-cream font-sans text-sm uppercase tracking-widest hover:bg-stone transition-colors duration-500"
-                  >
-                    Apply Now
-                  </a>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/careers"
+                      className="inline-flex items-center justify-center px-8 py-4 bg-charcoal text-cream font-sans text-sm uppercase tracking-widest hover:bg-stone transition-colors duration-500"
+                    >
+                      View Careers
+                    </Link>
+                    <a
+                      href="mailto:careers@parkwayeastdesign.com"
+                      className="inline-flex items-center justify-center px-8 py-4 border border-charcoal text-charcoal font-sans text-sm uppercase tracking-widest hover:bg-charcoal hover:text-cream transition-colors duration-500"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
                 </FadeIn>
               </div>
               <FadeIn direction="right" className="relative aspect-[4/3] overflow-hidden">
