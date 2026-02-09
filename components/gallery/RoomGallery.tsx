@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
 import FadeIn from '@/components/animations/FadeIn'
 import Lightbox from './Lightbox'
 
@@ -38,23 +37,9 @@ export default function RoomGallery({ name, images, allImages }: RoomGalleryProp
 
   // Determine grid layout based on number of images
   const getGridClass = () => {
-    if (images.length === 1) return 'grid-cols-1'
+    if (images.length === 1) return 'grid-cols-1 max-w-2xl'
     if (images.length === 2) return 'grid-cols-2'
-    if (images.length === 3) return 'grid-cols-2 md:grid-cols-3'
-    if (images.length === 4) return 'grid-cols-2'
     return 'grid-cols-2 md:grid-cols-3'
-  }
-
-  // Get aspect ratio class based on image position and count
-  const getAspectClass = (index: number) => {
-    if (images.length === 1) return 'aspect-[16/10]'
-    if (images.length === 2) return 'aspect-[4/3]'
-    if (images.length === 3) {
-      // First image spans full width or is larger
-      if (index === 0) return 'col-span-2 md:col-span-1 aspect-[4/3]'
-      return 'aspect-[4/3]'
-    }
-    return 'aspect-[4/3]'
   }
 
   return (
@@ -63,7 +48,7 @@ export default function RoomGallery({ name, images, allImages }: RoomGalleryProp
       <h3 className="font-serif text-2xl md:text-3xl text-charcoal mb-6">{name}</h3>
       
       {/* Image Grid */}
-      <div ref={ref} className={`grid ${getGridClass()} gap-4`}>
+      <div ref={ref} className={`grid ${getGridClass()} gap-3 md:gap-4`}>
         {images.map((image, index) => (
           <motion.button
             key={index}
@@ -74,7 +59,7 @@ export default function RoomGallery({ name, images, allImages }: RoomGalleryProp
               delay: index * 0.1,
               ease: [0.19, 1, 0.22, 1],
             }}
-            className={`relative overflow-hidden group cursor-pointer ${getAspectClass(index)}`}
+            className="relative overflow-hidden group cursor-pointer aspect-[4/3]"
             onClick={() => openLightbox(index)}
             aria-label={`View ${name} image ${index + 1}`}
           >

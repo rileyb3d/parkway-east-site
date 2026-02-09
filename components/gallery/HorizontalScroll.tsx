@@ -46,7 +46,7 @@ export default function HorizontalScroll({ images, className = '' }: HorizontalS
             <button
               key={index}
               onClick={() => openLightbox(index)}
-              className="flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[45vw] aspect-landscape relative overflow-hidden group cursor-pointer"
+              className="flex-shrink-0 w-[80vw] md:w-[60vw] lg:w-[45vw] aspect-[4/3] relative overflow-hidden group cursor-pointer"
             >
               <Image
                 src={image}

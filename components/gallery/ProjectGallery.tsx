@@ -32,44 +32,23 @@ export default function ProjectGallery({ images, className = '' }: ProjectGaller
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }, [images.length])
 
-  // Create an asymmetric layout pattern
-  const getLayoutClass = (index: number): string => {
-    const pattern = index % 6
-    switch (pattern) {
-      case 0:
-        return 'col-span-2 row-span-2 aspect-square' // Large
-      case 1:
-        return 'col-span-1 row-span-1 aspect-portrait' // Portrait
-      case 2:
-        return 'col-span-1 row-span-1 aspect-square' // Square
-      case 3:
-        return 'col-span-1 row-span-2 aspect-portrait' // Tall portrait
-      case 4:
-        return 'col-span-1 row-span-1 aspect-landscape' // Landscape
-      case 5:
-        return 'col-span-1 row-span-1 aspect-square' // Square
-      default:
-        return 'col-span-1 row-span-1 aspect-square'
-    }
-  }
-
   return (
     <>
       <div
         ref={ref}
-        className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[250px] ${className}`}
+        className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 ${className}`}
       >
         {images.map((image, index) => (
           <motion.button
             key={index}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{
               duration: 0.6,
-              delay: Math.min(index * 0.05, 0.5),
+              delay: Math.min(index * 0.05, 0.4),
               ease: [0.19, 1, 0.22, 1],
             }}
-            className={`relative overflow-hidden group cursor-pointer ${getLayoutClass(index)}`}
+            className="relative overflow-hidden group cursor-pointer aspect-[4/3]"
             onClick={() => openLightbox(index)}
             aria-label={`View image ${index + 1}`}
           >
