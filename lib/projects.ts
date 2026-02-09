@@ -70,56 +70,42 @@ export const projects: Project[] = [
     // Using the only high-res image (1920x1080) for hero/cover
     coverImage: '/projects/04-rockaway-retreat/images/7577-1920x1080-1.webp',
     heroImage: '/projects/04-rockaway-retreat/images/7577-1920x1080-1.webp',
+    // Room structure from original site: https://parkwayeastdesign.com/rockaway-retreat-project/
     rooms: [
       {
         name: 'Great Room',
         images: [
-          '/projects/04-rockaway-retreat/images/LCA_6968-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_6968-Edit-2.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7017-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7024.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7027.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7036.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7111-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7077-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7285-Edit.webp',
         ],
       },
       {
         name: 'Kitchen',
         images: [
-          '/projects/04-rockaway-retreat/images/LCA_7077-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7111-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7285-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7316-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7324-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7336-Edit.webp',
-        ],
-      },
-      {
-        name: 'Dining Room',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7351-Edit-2.webp',
           '/projects/04-rockaway-retreat/images/LCA_7364.webp',
           '/projects/04-rockaway-retreat/images/LCA_7376.webp',
-        ],
-      },
-      {
-        name: 'Pantry',
-        images: [
+          '/projects/04-rockaway-retreat/images/LCA_7324-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7387-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7422-Edit.webp',
         ],
       },
       {
-        name: 'Details',
+        name: 'Dining Room',
         images: [
-          '/projects/04-rockaway-retreat/images/LCA_7432-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7462-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7467.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7758-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7769-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7017-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_6968-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7036.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7024.webp',
+          '/projects/04-rockaway-retreat/images/LCA_6968-Edit-2.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7027.webp',
         ],
       },
       {
-        name: 'Pool',
+        name: 'Pantry',
         images: [
           '/projects/04-rockaway-retreat/images/LCA_7489-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7511-Edit.webp',
@@ -128,150 +114,80 @@ export const projects: Project[] = [
         ],
       },
       {
+        name: 'Pool',
+        images: [
+          '/projects/04-rockaway-retreat/images/LCA_7462-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7467.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7432-Edit.webp',
+        ],
+      },
+      {
         name: 'Entertainment Room',
         images: [
           '/projects/04-rockaway-retreat/images/LCA_7593-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7608-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7628-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7619-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7639.webp',
         ],
       },
       {
         name: 'Sports Bar',
         images: [
-          '/projects/04-rockaway-retreat/images/LCA_7619-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7628-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7639.webp',
-        ],
-      },
-      {
-        name: 'Theater & Golf Simulator',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_7659-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7670-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7681-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7688-Edit.webp',
-        ],
-      },
-      {
-        name: 'Hallway & Stairway',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7700-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7710-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7659-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7717-Edit-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7744-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7688-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7710-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7681-Edit.webp',
         ],
       },
       {
-        name: 'Primary Suite',
+        name: 'Theater Room and Golf Simulator',
         images: [
+          '/projects/04-rockaway-retreat/images/LCA_7744-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7758-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7786-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7769-Edit.webp',
+        ],
+      },
+      {
+        name: 'Bedrooms and Bathrooms',
+        images: [
           '/projects/04-rockaway-retreat/images/LCA_7822-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7836.webp',
-        ],
-      },
-      {
-        name: 'Primary Bath',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7843-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7849-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7863-Edit.webp',
-        ],
-      },
-      {
-        name: 'Primary Closet',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7886-Edit.webp',
-        ],
-      },
-      {
-        name: 'Bedroom',
-        images: [
+          '/projects/04-rockaway-retreat/images/LCA_7863-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7901-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7913-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7948-Edit.webp',
-        ],
-      },
-      {
-        name: 'Bedroom Bath',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7957-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7965.webp',
-        ],
-      },
-      {
-        name: 'Guest Suite',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_7976-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7994-Edit.webp',
-        ],
-      },
-      {
-        name: 'Guest Bath',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_7997-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8010.webp',
-        ],
-      },
-      {
-        name: 'Kids Room',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8077-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_8089-Edit.webp',
-        ],
-      },
-      {
-        name: 'Kids Bath',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8111-Edit.webp',
-        ],
-      },
-      {
-        name: 'Bunk Room',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8124-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7994-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7997-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8136-Edit.webp',
-        ],
-      },
-      {
-        name: 'Bunk Bath',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8153-Edit.webp',
-        ],
-      },
-      {
-        name: 'Laundry',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8165-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8124-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8111-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8194-Edit.webp',
-        ],
-      },
-      {
-        name: 'Mudroom',
-        images: [
+          '/projects/04-rockaway-retreat/images/LCA_8165-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8153-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8204.webp',
           '/projects/04-rockaway-retreat/images/LCA_8212.webp',
-        ],
-      },
-      {
-        name: 'Exterior',
-        images: [
-          '/projects/04-rockaway-retreat/images/LCA_8229-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_8250-Edit.webp',
-        ],
-      },
-      {
-        name: 'Outdoor Living',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_8282-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8289-Edit.webp',
-        ],
-      },
-      {
-        name: 'Evening & Twilight',
-        images: [
           '/projects/04-rockaway-retreat/images/LCA_8307-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8356-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8366-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_8379.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8077-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8089-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8229-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_8250-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7849-Edit.webp',
         ],
       },
     ],
@@ -306,207 +222,159 @@ export const projects: Project[] = [
     // Using high-res 1920x1080 images for hero/cover
     coverImage: '/projects/03-crowded-table/images/1765_1920x1080.webp',
     heroImage: '/projects/03-crowded-table/images/2214_1920x1080.webp',
+    // Room structure from original site: https://parkwayeastdesign.com/crowded-table-project/
     rooms: [
       {
         name: 'Great Room',
         images: [
-          '/projects/03-crowded-table/images/LCA_1120-.webp',
+          '/projects/03-crowded-table/images/1082_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_1132-.webp',
+          '/projects/03-crowded-table/images/LCA_1120-.webp',
           '/projects/03-crowded-table/images/LCA_1177.webp',
+          '/projects/03-crowded-table/images/1099_1920x1080.webp',
         ],
       },
       {
         name: 'Kitchen',
         images: [
+          '/projects/03-crowded-table/images/1187_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_1202-.webp',
-          '/projects/03-crowded-table/images/LCA_1233-.webp',
           '/projects/03-crowded-table/images/LCA_1257-.webp',
+          '/projects/03-crowded-table/images/LCA_1233-.webp',
           '/projects/03-crowded-table/images/LCA_1272-.webp',
           '/projects/03-crowded-table/images/LCA_1285-.webp',
           '/projects/03-crowded-table/images/LCA_1301-.webp',
+          '/projects/03-crowded-table/images/1309_1920x1080.webp',
         ],
       },
       {
         name: 'Dining Room',
         images: [
+          '/projects/03-crowded-table/images/1401_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_1388-.webp',
           '/projects/03-crowded-table/images/LCA_1416-.webp',
+        ],
+      },
+      {
+        name: 'Laundry Room',
+        images: [
           '/projects/03-crowded-table/images/LCA_1438-.webp',
           '/projects/03-crowded-table/images/LCA_1447-.webp',
-        ],
-      },
-      {
-        name: 'Details',
-        images: [
           '/projects/03-crowded-table/images/LCA_1455-.webp',
-          '/projects/03-crowded-table/images/LCA_1492-.webp',
-          '/projects/03-crowded-table/images/LCA_1506-.webp',
-        ],
-      },
-      {
-        name: 'Laundry',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1525-.webp',
-          '/projects/03-crowded-table/images/LCA_1547-Edit.webp',
         ],
       },
       {
         name: 'Powder Bath',
         images: [
-          '/projects/03-crowded-table/images/LCA_1555-.webp',
-          '/projects/03-crowded-table/images/LCA_1565-.webp',
+          '/projects/03-crowded-table/images/LCA_1506-.webp',
+          '/projects/03-crowded-table/images/LCA_1492-.webp',
         ],
       },
       {
         name: 'Office',
         images: [
-          '/projects/03-crowded-table/images/LCA_1602-.webp',
-          '/projects/03-crowded-table/images/LCA_1612-.webp',
-          '/projects/03-crowded-table/images/LCA_1620-.webp',
+          '/projects/03-crowded-table/images/1574_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1547-Edit.webp',
+          '/projects/03-crowded-table/images/LCA_1565-.webp',
+          '/projects/03-crowded-table/images/LCA_1525-.webp',
+          '/projects/03-crowded-table/images/LCA_1555-.webp',
         ],
       },
       {
         name: 'Primary Suite',
         images: [
+          '/projects/03-crowded-table/images/1582_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1602-.webp',
+          '/projects/03-crowded-table/images/LCA_1612-.webp',
+          '/projects/03-crowded-table/images/LCA_1620-.webp',
+          '/projects/03-crowded-table/images/1629_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_1655-.webp',
           '/projects/03-crowded-table/images/LCA_1664-.webp',
           '/projects/03-crowded-table/images/LCA_1672-.webp',
+          '/projects/03-crowded-table/images/1636_1920x1080.webp',
         ],
       },
       {
-        name: 'Primary Bath',
+        name: 'Bedroom Suite',
         images: [
+          '/projects/03-crowded-table/images/1706_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_1730-.webp',
           '/projects/03-crowded-table/images/LCA_1743-1-1.webp',
           '/projects/03-crowded-table/images/LCA_1757-.webp',
         ],
       },
       {
-        name: 'Primary Closet',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1775-.webp',
-          '/projects/03-crowded-table/images/LCA_1785-.webp',
-        ],
-      },
-      {
-        name: 'Bedroom Suite',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1790-.webp',
-          '/projects/03-crowded-table/images/LCA_1792-.webp',
-          '/projects/03-crowded-table/images/LCA_1801-.webp',
-        ],
-      },
-      {
-        name: 'Bedroom Bath',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1806-.webp',
-        ],
-      },
-      {
         name: 'Downstairs Suite',
         images: [
-          '/projects/03-crowded-table/images/LCA_1825-.webp',
-          '/projects/03-crowded-table/images/LCA_1835.webp',
-        ],
-      },
-      {
-        name: 'Downstairs Bath',
-        images: [
+          '/projects/03-crowded-table/images/LCA_1872.webp',
           '/projects/03-crowded-table/images/LCA_1846-.webp',
+          '/projects/03-crowded-table/images/LCA_1881.webp',
+          '/projects/03-crowded-table/images/1908_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1925-.webp',
+          '/projects/03-crowded-table/images/LCA_1899.webp',
+          '/projects/03-crowded-table/images/LCA_1934-.webp',
         ],
       },
       {
         name: 'Guest Bedroom',
         images: [
-          '/projects/03-crowded-table/images/LCA_1872.webp',
-          '/projects/03-crowded-table/images/LCA_1881.webp',
-        ],
-      },
-      {
-        name: 'Guest Bath',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1899.webp',
+          '/projects/03-crowded-table/images/1941_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1955-.webp',
+          '/projects/03-crowded-table/images/LCA_1975-.webp',
+          '/projects/03-crowded-table/images/LCA_1989-.webp',
+          '/projects/03-crowded-table/images/LCA_1995-.webp',
+          '/projects/03-crowded-table/images/LCA_2010-.webp',
         ],
       },
       {
         name: 'Double Twin Suite',
         images: [
-          '/projects/03-crowded-table/images/LCA_1925-.webp',
-          '/projects/03-crowded-table/images/LCA_1934-.webp',
-        ],
-      },
-      {
-        name: 'Double Twin Bath',
-        images: [
-          '/projects/03-crowded-table/images/LCA_1955-.webp',
+          '/projects/03-crowded-table/images/LCA_2050.webp',
+          '/projects/03-crowded-table/images/LCA_2026-.webp',
+          '/projects/03-crowded-table/images/LCA_2054-.webp',
+          '/projects/03-crowded-table/images/LCA_2076-2.webp',
+          '/projects/03-crowded-table/images/LCA_2102-.webp',
+          '/projects/03-crowded-table/images/LCA_2093-.webp',
         ],
       },
       {
         name: 'Downstairs Great Room',
         images: [
-          '/projects/03-crowded-table/images/LCA_1975-.webp',
-          '/projects/03-crowded-table/images/LCA_1989-.webp',
-          '/projects/03-crowded-table/images/LCA_1995-.webp',
-        ],
-      },
-      {
-        name: 'Entertainment Area',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2010-.webp',
-          '/projects/03-crowded-table/images/LCA_2026-.webp',
-        ],
-      },
-      {
-        name: 'Garage',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2050.webp',
-          '/projects/03-crowded-table/images/LCA_2054-.webp',
-        ],
-      },
-      {
-        name: 'Exterior',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2076-2.webp',
-        ],
-      },
-      {
-        name: 'Pool',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2093-.webp',
-          '/projects/03-crowded-table/images/LCA_2102-.webp',
-          '/projects/03-crowded-table/images/LCA_2147.webp',
-        ],
-      },
-      {
-        name: 'Outdoor Living',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2270-.webp',
+          '/projects/03-crowded-table/images/2214_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_2277.webp',
           '/projects/03-crowded-table/images/LCA_2281-.webp',
-          '/projects/03-crowded-table/images/LCA_2295-2.webp',
-        ],
-      },
-      {
-        name: 'Views',
-        images: [
-          '/projects/03-crowded-table/images/LCA_2317-.webp',
+          '/projects/03-crowded-table/images/LCA_2270-.webp',
           '/projects/03-crowded-table/images/LCA_2333-.webp',
-        ],
-      },
-      {
-        name: 'Backyard',
-        images: [
+          '/projects/03-crowded-table/images/LCA_2317-.webp',
+          '/projects/03-crowded-table/images/LCA_2295-2.webp',
+          '/projects/03-crowded-table/images/2252_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_2355-.webp',
           '/projects/03-crowded-table/images/LCA_2367-.webp',
         ],
       },
       {
-        name: 'Evening & Twilight',
+        name: 'Garage',
         images: [
-          '/projects/03-crowded-table/images/LCA_2419-.webp',
+          '/projects/03-crowded-table/images/2413_1920x1080.webp',
           '/projects/03-crowded-table/images/LCA_2429.webp',
+          '/projects/03-crowded-table/images/LCA_2419-.webp',
           '/projects/03-crowded-table/images/LCA_2438-.webp',
           '/projects/03-crowded-table/images/LCA_2457-.webp',
+          '/projects/03-crowded-table/images/LCA_2147.webp',
+        ],
+      },
+      {
+        name: 'Backyard and Pool',
+        images: [
+          '/projects/03-crowded-table/images/1765_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1790-.webp',
+          '/projects/03-crowded-table/images/LCA_1775-.webp',
+          '/projects/03-crowded-table/images/LCA_1792-.webp',
+          '/projects/03-crowded-table/images/LCA_1801-.webp',
+          '/projects/03-crowded-table/images/LCA_1806-.webp',
+          '/projects/03-crowded-table/images/1819_1920x1080.webp',
+          '/projects/03-crowded-table/images/LCA_1785-.webp',
+          '/projects/03-crowded-table/images/LCA_1825-.webp',
         ],
       },
     ],
