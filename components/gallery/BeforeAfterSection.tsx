@@ -23,46 +23,46 @@ export default function BeforeAfterSection({
   const [showAfter, setShowAfter] = useState(true)
 
   return (
-    <div className="mb-32 last:mb-0">
-      {/* Section Header - Large & Editorial */}
-      <FadeIn className="mb-12 md:mb-16">
-        <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">{title}</h3>
+    <div className="mb-24 md:mb-32 last:mb-0">
+      {/* Section Header */}
+      <FadeIn className="mb-10 md:mb-12">
+        <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mb-5">{title}</h3>
         {description && (
-          <p className="font-sans text-xl md:text-2xl text-stone leading-relaxed max-w-4xl">
+          <p className="font-sans text-lg md:text-xl text-stone leading-relaxed max-w-3xl">
             {description}
           </p>
         )}
       </FadeIn>
 
-      {/* Large Before/After Display */}
-      <FadeIn delay={0.2}>
-        <div className="mb-16">
-          {/* Toggle - Minimal & Elegant */}
-          <div className="flex justify-center gap-1 mb-8">
+      {/* Toggle & Interactive Comparison */}
+      <FadeIn delay={0.1}>
+        <div className="mb-12">
+          {/* Toggle Buttons */}
+          <div className="flex gap-2 mb-6">
             <button
               onClick={() => setShowAfter(false)}
-              className={`px-8 py-4 font-sans text-sm tracking-[0.2em] uppercase transition-all duration-500 ${
+              className={`px-6 py-3 font-sans text-sm tracking-[0.15em] uppercase transition-all duration-300 ${
                 !showAfter
                   ? 'bg-charcoal text-cream'
-                  : 'bg-transparent text-stone hover:text-charcoal'
+                  : 'bg-warm-100 text-stone hover:bg-warm-200'
               }`}
             >
               Before
             </button>
             <button
               onClick={() => setShowAfter(true)}
-              className={`px-8 py-4 font-sans text-sm tracking-[0.2em] uppercase transition-all duration-500 ${
+              className={`px-6 py-3 font-sans text-sm tracking-[0.15em] uppercase transition-all duration-300 ${
                 showAfter
                   ? 'bg-charcoal text-cream'
-                  : 'bg-transparent text-stone hover:text-charcoal'
+                  : 'bg-warm-100 text-stone hover:bg-warm-200'
               }`}
             >
               After
             </button>
           </div>
 
-          {/* Large Image Comparison */}
-          <div className="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-warm-50">
+          {/* Large Image - Natural aspect ratio */}
+          <div className="relative max-w-4xl">
             <AnimatePresence mode="wait">
               {!showAfter ? (
                 <motion.div
@@ -70,17 +70,22 @@ export default function BeforeAfterSection({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-                  className="absolute inset-0"
+                  transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
                 >
                   <Image
                     src={before}
                     alt={`${title} - Before`}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
+                    width={1600}
+                    height={1200}
+                    className="w-full h-auto"
+                    sizes="(max-width: 768px) 100vw, 900px"
                     priority
                   />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-sans text-xs tracking-[0.15em] uppercase text-charcoal">
+                      Before
+                    </span>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.div
@@ -88,58 +93,58 @@ export default function BeforeAfterSection({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-                  className="absolute inset-0"
+                  transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
                 >
                   <Image
                     src={after}
                     alt={`${title} - After`}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
+                    width={1600}
+                    height={1200}
+                    className="w-full h-auto"
+                    sizes="(max-width: 768px) 100vw, 900px"
                     priority
                   />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-sans text-xs tracking-[0.15em] uppercase text-charcoal">
+                      After
+                    </span>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
-
-            {/* Minimal Label */}
-            <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
-              <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-sans text-xs tracking-[0.15em] uppercase text-charcoal">
-                {showAfter ? 'After' : 'Before'}
-              </span>
-            </div>
           </div>
         </div>
       </FadeIn>
 
-      {/* Side by Side Comparison - Large */}
-      <FadeIn delay={0.3}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-16">
-          <div className="relative aspect-[3/4] overflow-hidden group">
+      {/* Side by Side - Natural aspect ratios */}
+      <FadeIn delay={0.2}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12 max-w-5xl">
+          <div className="relative group">
             <Image
               src={before}
               alt={`${title} - Before`}
-              fill
-              className="object-cover transition-transform duration-700 ease-out-expo group-hover:scale-[1.02]"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              width={1200}
+              height={1600}
+              className="w-full h-auto transition-transform duration-700 ease-out-expo group-hover:scale-[1.01]"
+              sizes="(max-width: 768px) 100vw, 600px"
             />
-            <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-              <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-sans text-xs tracking-[0.15em] uppercase text-charcoal">
+            <div className="absolute bottom-3 left-3">
+              <span className="bg-white/90 backdrop-blur-sm px-3 py-1.5 font-sans text-xs tracking-[0.12em] uppercase text-charcoal">
                 Before
               </span>
             </div>
           </div>
-          <div className="relative aspect-[3/4] overflow-hidden group">
+          <div className="relative group">
             <Image
               src={after}
               alt={`${title} - After`}
-              fill
-              className="object-cover transition-transform duration-700 ease-out-expo group-hover:scale-[1.02]"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              width={1200}
+              height={1600}
+              className="w-full h-auto transition-transform duration-700 ease-out-expo group-hover:scale-[1.01]"
+              sizes="(max-width: 768px) 100vw, 600px"
             />
-            <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6">
-              <span className="bg-white/90 backdrop-blur-sm px-4 py-2 font-sans text-xs tracking-[0.15em] uppercase text-charcoal">
+            <div className="absolute bottom-3 left-3">
+              <span className="bg-white/90 backdrop-blur-sm px-3 py-1.5 font-sans text-xs tracking-[0.12em] uppercase text-charcoal">
                 After
               </span>
             </div>
@@ -147,12 +152,12 @@ export default function BeforeAfterSection({
         </div>
       </FadeIn>
 
-      {/* Design Elements - Elegant List */}
+      {/* Design Elements */}
       {designElements && designElements.length > 0 && (
-        <FadeIn delay={0.4}>
-          <div className="max-w-3xl">
-            <p className="font-sans text-xs tracking-[0.2em] uppercase text-stone mb-8">Key Design Elements</p>
-            <ul className="space-y-8">
+        <FadeIn delay={0.3}>
+          <div className="max-w-2xl">
+            <p className="font-sans text-xs tracking-[0.2em] uppercase text-stone mb-6">Key Design Elements</p>
+            <ul className="space-y-6">
               {designElements.map((element, index) => {
                 const dashIndex = element.indexOf(' - ')
                 const hasTitle = dashIndex > 0
@@ -160,11 +165,11 @@ export default function BeforeAfterSection({
                 const elementDesc = hasTitle ? element.substring(dashIndex + 3) : element
 
                 return (
-                  <li key={index} className="pl-8 border-l border-warm-300">
+                  <li key={index} className="pl-6 border-l border-warm-300">
                     {elementTitle && (
-                      <p className="font-serif text-xl md:text-2xl text-charcoal mb-2">{elementTitle}</p>
+                      <p className="font-serif text-lg text-charcoal mb-1">{elementTitle}</p>
                     )}
-                    <p className="font-sans text-stone text-lg leading-relaxed">{elementDesc}</p>
+                    <p className="font-sans text-stone leading-relaxed">{elementDesc}</p>
                   </li>
                 )
               })}
