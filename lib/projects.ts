@@ -550,12 +550,13 @@ export const projects: Project[] = [
       quote: "We've had such a great experience with Eleena and Parkway East Design. She makes the process so easy and FUN! She's one of those people who is 'on it.' I can't recommend them enough.",
       author: 'Client',
     },
+    // Structure from original site: https://parkwayeastdesign.com/the-stella-project/
     beforeAfter: [
       {
         title: 'Entryway Transformation',
-        // CORRECTED: According to original content.md lines 28-29
+        // From original site: Before = Blog-Post-1000-X-1500-3.png, After = IMG_0446-2.jpg
         before: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-3.webp',
-        after: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
+        after: '/projects/01-stella-project/images/IMG_0446-2.webp',
         description: 'As the first introduction into the home, we wanted to create an experience that was both warm and welcoming. We absolutely love how this entryway turned out! It was really just a matter of getting the proportions right to establish the tone within the home.',
         designElements: [
           'Round Mirror - Used this beautiful round mirror to add some much-needed height against the wall and create an illusion of space and variety as it caught the reflection of the rest of the house.',
@@ -565,9 +566,9 @@ export const projects: Project[] = [
       },
       {
         title: 'Living Room Transformation',
-        // CORRECTED: According to original content.md lines 51-52
-        before: '/projects/01-stella-project/images/IMG_0419-2.webp',
-        after: '/projects/01-stella-project/images/IMG_0446-2.webp',
+        // From original site: Before = Instagram-Landscape-Posts-6.png, After = 20221107-IMG_0470.jpg
+        before: '/projects/01-stella-project/images/Instagram-Landscape-Posts-6.webp',
+        after: '/projects/01-stella-project/images/20221107-IMG_0470.webp',
         description: 'To continue the feeling from the entryway, we incorporated many of the same design elements into the living room. Not only was this the place to host company when they came to visit, but the living room was the ideal spot within the home to gather and relax as a family.',
         designElements: [
           'Swivel Chairs - Sourced swivel chairs with a heavy-duty bouclé fabric to encourage conversation from the adjacent kitchen while allowing visibility of the television for family movie nights.',
@@ -580,12 +581,17 @@ export const projects: Project[] = [
         ],
       },
     ],
+    // Additional gallery images from original site order
     images: [
       '/projects/01-stella-project/images/IMG_0450_jpg-2.webp',
+      '/projects/01-stella-project/images/IMG_0434.webp',
       '/projects/01-stella-project/images/IMG_0460-2.webp',
+      '/projects/01-stella-project/images/IMG_0484.webp',
+      '/projects/01-stella-project/images/IMG_0487.webp',
+      '/projects/01-stella-project/images/IMG_0419-2.webp',
+      '/projects/01-stella-project/images/IMG_0466.webp',
       '/projects/01-stella-project/images/IMG_0479_jpg-2.webp',
-      '/projects/01-stella-project/images/20221107-IMG_0470.webp',
-      '/projects/01-stella-project/images/Instagram-Landscape-Posts-6.webp',
+      '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
     ],
     highlights: [
       'Before & after transformation',
