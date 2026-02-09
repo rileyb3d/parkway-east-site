@@ -7,6 +7,7 @@ import KineticHeading from '@/components/animations/KineticHeading'
 import ParallaxImage from '@/components/animations/ParallaxImage'
 import { StickyHorizontalScroll } from '@/components/gallery/HorizontalScroll'
 import ProjectGallery from '@/components/gallery/ProjectGallery'
+import BeforeAfter from '@/components/gallery/BeforeAfter'
 import Footer from '@/components/ui/Footer'
 import { projects, getProjectBySlug } from '@/lib/projects'
 
@@ -157,19 +158,39 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </section>
 
-        {/* Horizontal Scroll Gallery */}
-        {heroImages.length > 0 && (
-          <StickyHorizontalScroll images={heroImages} className="my-12" />
-        )}
-
-        {/* Masonry Gallery */}
-        {galleryImages.length > 0 && (
+        {/* Before/After Section - for renovation/refresh projects */}
+        {project.beforeAfter && project.beforeAfter.length > 0 && (
           <section className="section-padding">
             <div className="container-wide">
               <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
-                Gallery
+                The Transformation
               </KineticHeading>
-              <ProjectGallery images={galleryImages} />
+              {project.beforeAfter.map((comparison, index) => (
+                <BeforeAfter
+                  key={index}
+                  title={comparison.title}
+                  before={comparison.before}
+                  after={comparison.after}
+                  description={comparison.description}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Horizontal Scroll Gallery - only for projects without before/after */}
+        {!project.beforeAfter && heroImages.length > 0 && (
+          <StickyHorizontalScroll images={heroImages} className="my-12" />
+        )}
+
+        {/* Additional Gallery Images */}
+        {project.images.length > 0 && (
+          <section className="section-padding">
+            <div className="container-wide">
+              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
+                {project.beforeAfter ? 'Details' : 'Gallery'}
+              </KineticHeading>
+              <ProjectGallery images={project.beforeAfter ? project.images : galleryImages} />
             </div>
           </section>
         )}

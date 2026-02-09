@@ -1,3 +1,10 @@
+export interface BeforeAfterPair {
+  title: string
+  before: string
+  after: string
+  description?: string
+}
+
 export interface Project {
   id: string
   slug: string
@@ -12,6 +19,7 @@ export interface Project {
   coverImage: string
   heroImage: string
   images: string[]
+  beforeAfter?: BeforeAfterPair[]
   highlights?: string[]
 }
 
@@ -167,12 +175,21 @@ export const projects: Project[] = [
     ],
     coverImage: '/projects/01-stella-project/images/Blog-Covers-7.webp',
     heroImage: '/projects/01-stella-project/images/IMG_0446-2.webp',
+    beforeAfter: [
+      {
+        title: 'Entryway Transformation',
+        before: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-3.webp',
+        after: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
+        description: 'As the first introduction into the home, we wanted to create an experience that was both warm and welcoming. A round mirror adds height and space, while a new rug creates a firmer visual foundation.',
+      },
+      {
+        title: 'Living Room Transformation',
+        before: '/projects/01-stella-project/images/IMG_0419-2.webp',
+        after: '/projects/01-stella-project/images/IMG_0446-2.webp',
+        description: 'Swivel chairs, thoughtful drapery, and mid-century modern accents with blues and oranges transformed this space into a perfect blend of sophistication and cozy family living.',
+      },
+    ],
     images: [
-      '/projects/01-stella-project/images/Blog-Covers-7.webp',
-      '/projects/01-stella-project/images/Blog-Post-1000-X-1500-3.webp',
-      '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
-      '/projects/01-stella-project/images/IMG_0419-2.webp',
-      '/projects/01-stella-project/images/IMG_0446-2.webp',
       '/projects/01-stella-project/images/IMG_0450_jpg-2.webp',
       '/projects/01-stella-project/images/IMG_0460-2.webp',
       '/projects/01-stella-project/images/IMG_0479_jpg-2.webp',
