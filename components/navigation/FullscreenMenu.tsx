@@ -17,8 +17,10 @@ const menuItems = [
 ]
 
 const serviceItems = [
+  { label: 'Full Service', href: '/services' },
   { label: 'Residential', href: '/services/residential' },
   { label: 'Commercial', href: '/services/commercial' },
+  { label: 'Our Process', href: '/services/our-process' },
 ]
 
 const aboutItems = [

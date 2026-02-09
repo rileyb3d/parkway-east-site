@@ -59,7 +59,7 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <>
-      <GhostHeader />
+      <GhostHeader variant="light" />
       
       <main>
         {/* Hero */}
@@ -212,6 +212,17 @@ export default function ServicesPage() {
                 </FadeIn>
               ))}
             </div>
+
+            <FadeIn delay={0.6}>
+              <div className="text-center mt-12">
+                <Link
+                  href="/services/our-process"
+                  className="inline-block text-warm-300 hover:text-cream transition-colors duration-300 font-sans tracking-wide uppercase text-sm"
+                >
+                  Learn More About Our Process →
+                </Link>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
