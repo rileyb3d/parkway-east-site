@@ -80,9 +80,9 @@ export default function FullscreenMenu({ onClose }: FullscreenMenuProps) {
             </div>
 
             <div className="mt-12">
-              <p className="caption-text mb-4">Contact</p>
+              <p className="caption-text mb-4">Location</p>
               <p className="font-sans text-stone">St. George, Utah</p>
-              <p className="font-sans text-stone">Southern Utah & Beyond</p>
+              <p className="font-sans text-stone text-sm mt-1">Serving Southern Utah & Beyond</p>
             </div>
 
             <div className="mt-12">
