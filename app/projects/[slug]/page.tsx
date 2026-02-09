@@ -5,11 +5,11 @@ import GhostHeader from '@/components/navigation/GhostHeader'
 import FadeIn from '@/components/animations/FadeIn'
 import KineticHeading from '@/components/animations/KineticHeading'
 import ParallaxImage from '@/components/animations/ParallaxImage'
-import { StickyHorizontalScroll } from '@/components/gallery/HorizontalScroll'
 import ProjectGallery from '@/components/gallery/ProjectGallery'
-import BeforeAfter from '@/components/gallery/BeforeAfter'
+import BeforeAfterSection from '@/components/gallery/BeforeAfterSection'
+import RoomGallery from '@/components/gallery/RoomGallery'
 import Footer from '@/components/ui/Footer'
-import { projects, getProjectBySlug } from '@/lib/projects'
+import { projects, getProjectBySlug, getAllProjectImages } from '@/lib/projects'
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>
@@ -47,9 +47,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const currentIndex = projects.findIndex(p => p.slug === slug)
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
-  // Split images for different gallery sections
-  const heroImages = project.images.slice(0, 5)
-  const galleryImages = project.images.slice(5)
+  // Get all images for lightbox
+  const allImages = getAllProjectImages(project)
 
   return (
     <>
@@ -93,10 +92,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {/* Description */}
               <div className="lg:col-span-7">
                 <FadeIn>
-                  <p className="font-sans text-xl md:text-2xl text-charcoal leading-relaxed">
+                  <p className="font-sans text-xl md:text-2xl text-charcoal leading-relaxed mb-6">
                     {project.description}
                   </p>
                 </FadeIn>
+                {project.longDescription && (
+                  <FadeIn delay={0.1}>
+                    <p className="body-text">
+                      {project.longDescription}
+                    </p>
+                  </FadeIn>
+                )}
+                {project.designPhilosophy && (
+                  <FadeIn delay={0.2}>
+                    <div className="mt-8 p-6 bg-warm-100">
+                      <p className="caption-text text-stone mb-3">Design Philosophy</p>
+                      <p className="font-serif text-lg text-charcoal leading-relaxed">
+                        {project.designPhilosophy}
+                      </p>
+                    </div>
+                  </FadeIn>
+                )}
               </div>
 
               {/* Credits & Details */}
@@ -137,8 +153,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       </div>
                     )}
 
+                    {/* Special Features */}
+                    {project.specialFeatures && project.specialFeatures.length > 0 && (
+                      <div>
+                        <p className="caption-text text-stone mb-4">Special Features</p>
+                        <ul className="space-y-2">
+                          {project.specialFeatures.map((feature, index) => (
+                            <li key={index} className="font-sans text-charcoal flex items-start gap-3">
+                              <span className="w-1.5 h-1.5 rounded-full bg-stone mt-2 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Highlights */}
-                    {project.highlights && project.highlights.length > 0 && (
+                    {project.highlights && project.highlights.length > 0 && !project.specialFeatures && (
                       <div>
                         <p className="caption-text text-stone mb-4">Highlights</p>
                         <ul className="space-y-2">
@@ -158,39 +189,98 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </section>
 
-        {/* Before/After Section - for renovation/refresh projects */}
+        {/* Testimonial - for projects that have one */}
+        {project.testimonial && (
+          <section className="section-padding bg-warm-100">
+            <div className="container-wide max-w-4xl mx-auto text-center">
+              <FadeIn>
+                <svg className="w-10 h-10 mx-auto mb-6 text-warm-300" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </FadeIn>
+              <FadeIn delay={0.1}>
+                <p className="font-serif text-2xl md:text-3xl text-charcoal leading-relaxed mb-6">
+                  &ldquo;{project.testimonial.quote}&rdquo;
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="caption-text text-stone">— {project.testimonial.author}</p>
+              </FadeIn>
+            </div>
+          </section>
+        )}
+
+        {/* Before/After Section - for renovation/refresh projects like Stella */}
         {project.beforeAfter && project.beforeAfter.length > 0 && (
           <section className="section-padding">
             <div className="container-wide">
-              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
+              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-16">
                 The Transformation
               </KineticHeading>
               {project.beforeAfter.map((comparison, index) => (
-                <BeforeAfter
+                <BeforeAfterSection
                   key={index}
                   title={comparison.title}
                   before={comparison.before}
                   after={comparison.after}
                   description={comparison.description}
+                  designElements={comparison.designElements}
                 />
               ))}
             </div>
           </section>
         )}
 
-        {/* Horizontal Scroll Gallery - only for projects without before/after */}
-        {!project.beforeAfter && heroImages.length > 0 && (
-          <StickyHorizontalScroll images={heroImages} className="my-12" />
-        )}
-
-        {/* Additional Gallery Images */}
-        {project.images.length > 0 && (
+        {/* Room-organized Gallery - for custom home projects */}
+        {project.rooms && project.rooms.length > 0 && (
           <section className="section-padding">
             <div className="container-wide">
-              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
-                {project.beforeAfter ? 'Details' : 'Gallery'}
+              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-16">
+                Explore the Home
               </KineticHeading>
-              <ProjectGallery images={project.beforeAfter ? project.images : galleryImages} />
+              {project.rooms.map((room, index) => (
+                <RoomGallery
+                  key={index}
+                  name={room.name}
+                  images={room.images}
+                  allImages={allImages}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Additional Detail Images - for Stella Project */}
+        {project.beforeAfter && project.images.length > 0 && (
+          <section className="section-padding bg-warm-100">
+            <div className="container-wide">
+              <KineticHeading as="h2" className="text-display-sm text-charcoal mb-12">
+                Details
+              </KineticHeading>
+              <ProjectGallery images={project.images} />
+            </div>
+          </section>
+        )}
+
+        {/* Project Conclusion - for Stella */}
+        {project.slug === 'stella-project' && (
+          <section className="section-padding">
+            <div className="container-wide max-w-3xl">
+              <FadeIn>
+                <p className="font-serif text-2xl md:text-3xl text-charcoal leading-relaxed mb-6">
+                  Our client was so thrilled to see the transformation, and we loved being there to share it with them.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.1}>
+                <p className="body-text mb-6">
+                  We can just imagine the many afternoons enjoyed with friends and family and the memories to be made within their home.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="font-serif text-xl text-stone italic">
+                  We think Stella approves, too.
+                </p>
+              </FadeIn>
             </div>
           </section>
         )}
