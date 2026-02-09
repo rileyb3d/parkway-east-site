@@ -67,9 +67,9 @@ export const projects: Project[] = [
       { role: 'Interior Design', name: 'Parkway East Design' },
       { role: 'Architect', name: 'Shawn R. Patten' },
     ],
-    coverImage: '/projects/04-rockaway-retreat/images/LCA_6968-Edit.webp',
-    // Using pool shot as hero - better visual impact. TODO: Get high-res from client
-    heroImage: '/projects/04-rockaway-retreat/images/LCA_7519-Edit.webp',
+    // Using the only high-res image (1920x1080) for hero/cover
+    coverImage: '/projects/04-rockaway-retreat/images/7577-1920x1080-1.webp',
+    heroImage: '/projects/04-rockaway-retreat/images/7577-1920x1080-1.webp',
     rooms: [
       {
         name: 'Great Room',
@@ -303,8 +303,9 @@ export const projects: Project[] = [
       { role: 'Interior Design', name: 'Parkway East Design' },
       { role: 'Architect', name: 'Shawn R. Patten' },
     ],
-    coverImage: '/projects/03-crowded-table/images/LCA_1120-.webp',
-    heroImage: '/projects/03-crowded-table/images/LCA_1177.webp',
+    // Using high-res 1920x1080 images for hero/cover
+    coverImage: '/projects/03-crowded-table/images/1765_1920x1080.webp',
+    heroImage: '/projects/03-crowded-table/images/2214_1920x1080.webp',
     rooms: [
       {
         name: 'Great Room',
@@ -674,8 +675,9 @@ export const projects: Project[] = [
     credits: [
       { role: 'Interior Design', name: 'Parkway East Design' },
     ],
+    // Using highest-res images for hero/cover
     coverImage: '/projects/01-stella-project/images/Blog-Covers-7.webp',
-    heroImage: '/projects/01-stella-project/images/IMG_0446-2.webp',
+    heroImage: '/projects/01-stella-project/images/IMG_0487.webp',
     testimonial: {
       quote: "We've had such a great experience with Eleena and Parkway East Design. She makes the process so easy and FUN! She's one of those people who is 'on it.' I can't recommend them enough.",
       author: 'Client',
