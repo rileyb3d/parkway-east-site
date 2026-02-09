@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import FullscreenMenu from './FullscreenMenu'
@@ -59,11 +60,22 @@ export default function GhostHeader() {
           {/* Logo */}
           <Link
             href="/"
-            className={`font-serif text-xl md:text-2xl tracking-tight transition-colors duration-300 ${
+            className={`flex items-center gap-3 transition-colors duration-300 ${
               isScrolled || isMenuOpen ? 'text-charcoal' : 'text-white'
             }`}
           >
-            Parkway East
+            <Image
+              src="/logo-icon.webp"
+              alt="Parkway East Design"
+              width={40}
+              height={40}
+              className={`transition-all duration-300 ${
+                isScrolled || isMenuOpen ? '' : 'brightness-0 invert'
+              }`}
+            />
+            <span className="font-serif text-xl md:text-2xl tracking-tight">
+              Parkway East
+            </span>
           </Link>
 
           {/* Menu Toggle */}
