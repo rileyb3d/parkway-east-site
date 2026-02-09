@@ -22,7 +22,7 @@ export default function Home() {
           {/* Background Image with Parallax */}
           <div className="absolute inset-0 z-0">
             <ParallaxImage
-              src="/projects/04-rockaway-retreat/images/LCA_6968-Edit.webp"
+              src="/projects/02-abby-manor/images/LCA_2305-.webp"
               alt="Parkway East Design - Bespoke Interior Design"
               containerClassName="w-full h-full"
               speed={0.3}
