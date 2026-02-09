@@ -68,7 +68,8 @@ export const projects: Project[] = [
       { role: 'Architect', name: 'Shawn R. Patten' },
     ],
     coverImage: '/projects/04-rockaway-retreat/images/LCA_6968-Edit.webp',
-    heroImage: '/projects/04-rockaway-retreat/images/7577-1920x1080-1.webp',
+    // Using pool shot as hero - better visual impact. TODO: Get high-res from client
+    heroImage: '/projects/04-rockaway-retreat/images/LCA_7519-Edit.webp',
     rooms: [
       {
         name: 'Great Room',
