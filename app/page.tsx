@@ -18,7 +18,7 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-screen flex items-end">
+        <section className="relative h-screen flex flex-col justify-end">
           {/* Background Image with Parallax */}
           <div className="absolute inset-0 z-0">
             <ParallaxImage
@@ -31,8 +31,11 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
           </div>
 
+          {/* Spacer to prevent overlap with header */}
+          <div className="h-24 md:h-28 flex-shrink-0" />
+
           {/* Hero Content */}
-          <div className="relative z-10 w-full section-padding pb-20 md:pb-32">
+          <div className="relative z-10 w-full section-padding pb-20 md:pb-32 mt-auto">
             <div className="container-wide">
               <FadeIn delay={0.2}>
                 <p className="caption-text text-white/80 mb-4">Southern Utah & Beyond</p>
