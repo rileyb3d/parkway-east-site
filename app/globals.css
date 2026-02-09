@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-sans;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-charcoal text-cream;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom cursor styles */
+  .cursor-view {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  /* Ghost header transitions */
+  .header-transparent {
+    @apply bg-transparent;
+  }
+  
+  .header-solid {
+    @apply bg-cream/95 backdrop-blur-sm shadow-sm;
+  }
+
+  /* Text reveal animation */
+  .text-reveal {
+    @apply overflow-hidden;
+  }
+  
+  .text-reveal > * {
+    @apply translate-y-full;
+    animation: textReveal 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  }
+
+  /* Image hover zoom */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+  
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-out-expo;
+  }
+  
+  .img-zoom:hover img {
+    @apply scale-105;
+  }
+
+  /* Link underline animation */
+  .link-underline {
+    @apply relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-px bg-current transition-all duration-500 ease-out-expo;
+  }
+  
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    @apply overflow-hidden;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-section px-6 md:px-12 lg:px-20;
+  }
+
+  /* Max width container */
+  .container-wide {
+    @apply max-w-[1800px] mx-auto;
+  }
+
+  /* Statement heading */
+  .heading-statement {
+    @apply font-serif text-display-lg md:text-display-xl tracking-tight;
+  }
+
+  /* Body text */
+  .body-text {
+    @apply font-sans text-base md:text-lg text-stone leading-relaxed;
+  }
+
+  /* Caption text */
+  .caption-text {
+    @apply font-sans text-xs md:text-sm uppercase tracking-widest text-stone;
+  }
+}
+
+@layer utilities {
+  /* Stagger children animations */
+  .stagger-children > * {
+    @apply opacity-0;
+  }
+
+  /* Aspect ratios */
+  .aspect-portrait {
+    aspect-ratio: 3/4;
+  }
+  
+  .aspect-landscape {
+    aspect-ratio: 4/3;
+  }
+  
+  .aspect-wide {
+    aspect-ratio: 16/9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1/1;
+  }
+
+  /* Full viewport sections */
+  .min-h-screen-nav {
+    min-height: calc(100vh - 80px);
+  }
+}
+
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
