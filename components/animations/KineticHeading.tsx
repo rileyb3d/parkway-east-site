@@ -32,7 +32,7 @@ export default function KineticHeading({
   const MotionTag = motion[Tag] as typeof motion.h2
 
   return (
-    <div ref={ref} className="overflow-hidden">
+    <div ref={ref} className="overflow-visible">
       <MotionTag
         style={{ x }}
         initial={{ opacity: 0, y: 60 }}
