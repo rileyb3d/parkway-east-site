@@ -114,6 +114,8 @@ export const projects: Project[] = [
           '/projects/04-rockaway-retreat/images/LCA_7432-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7462-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7467.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7758-Edit.webp',
+          '/projects/04-rockaway-retreat/images/LCA_7769-Edit.webp',
         ],
       },
       {
@@ -156,8 +158,6 @@ export const projects: Project[] = [
           '/projects/04-rockaway-retreat/images/LCA_7710-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7717-Edit-Edit.webp',
           '/projects/04-rockaway-retreat/images/LCA_7744-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7758-Edit.webp',
-          '/projects/04-rockaway-retreat/images/LCA_7769-Edit.webp',
         ],
       },
       {
@@ -393,6 +393,11 @@ export const projects: Project[] = [
           '/projects/03-crowded-table/images/LCA_1790-.webp',
           '/projects/03-crowded-table/images/LCA_1792-.webp',
           '/projects/03-crowded-table/images/LCA_1801-.webp',
+        ],
+      },
+      {
+        name: 'Bedroom Bath',
+        images: [
           '/projects/03-crowded-table/images/LCA_1806-.webp',
         ],
       },
@@ -401,6 +406,11 @@ export const projects: Project[] = [
         images: [
           '/projects/03-crowded-table/images/LCA_1825-.webp',
           '/projects/03-crowded-table/images/LCA_1835.webp',
+        ],
+      },
+      {
+        name: 'Downstairs Bath',
+        images: [
           '/projects/03-crowded-table/images/LCA_1846-.webp',
         ],
       },
@@ -409,6 +419,11 @@ export const projects: Project[] = [
         images: [
           '/projects/03-crowded-table/images/LCA_1872.webp',
           '/projects/03-crowded-table/images/LCA_1881.webp',
+        ],
+      },
+      {
+        name: 'Guest Bath',
+        images: [
           '/projects/03-crowded-table/images/LCA_1899.webp',
         ],
       },
@@ -417,6 +432,11 @@ export const projects: Project[] = [
         images: [
           '/projects/03-crowded-table/images/LCA_1925-.webp',
           '/projects/03-crowded-table/images/LCA_1934-.webp',
+        ],
+      },
+      {
+        name: 'Double Twin Bath',
+        images: [
           '/projects/03-crowded-table/images/LCA_1955-.webp',
         ],
       },
