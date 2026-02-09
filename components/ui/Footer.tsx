@@ -34,6 +34,9 @@ export default function Footer() {
               <Link href="/careers" className="font-sans text-warm-300 hover:text-cream transition-colors duration-300">
                 Careers
               </Link>
+              <Link href="/shop" className="font-sans text-warm-300 hover:text-cream transition-colors duration-300">
+                Shop
+              </Link>
               <Link href="/inquire" className="font-sans text-warm-300 hover:text-cream transition-colors duration-300">
                 Inquire
               </Link>
