@@ -57,7 +57,7 @@ export default function ProjectsPage() {
                         sizes={index === 0 ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
                         priority={index < 2}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
                     </div>
                     
                     {/* Content Overlay */}

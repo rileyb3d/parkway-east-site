@@ -66,7 +66,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               speed={0.3}
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
           </div>
 
           <div className="relative z-10 w-full section-padding pb-20 md:pb-32">

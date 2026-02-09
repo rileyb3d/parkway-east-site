@@ -28,7 +28,7 @@ export default function Home() {
               speed={0.3}
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/10" />
           </div>
 
           {/* Spacer to prevent overlap with header */}
