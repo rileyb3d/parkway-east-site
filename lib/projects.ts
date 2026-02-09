@@ -178,14 +178,14 @@ export const projects: Project[] = [
     beforeAfter: [
       {
         title: 'Entryway Transformation',
-        before: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-3.webp',
-        after: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
+        before: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-4.webp',
+        after: '/projects/01-stella-project/images/Blog-Post-1000-X-1500-3.webp',
         description: 'As the first introduction into the home, we wanted to create an experience that was both warm and welcoming. A round mirror adds height and space, while a new rug creates a firmer visual foundation.',
       },
       {
         title: 'Living Room Transformation',
-        before: '/projects/01-stella-project/images/IMG_0419-2.webp',
-        after: '/projects/01-stella-project/images/IMG_0446-2.webp',
+        before: '/projects/01-stella-project/images/IMG_0446-2.webp',
+        after: '/projects/01-stella-project/images/IMG_0419-2.webp',
         description: 'Swivel chairs, thoughtful drapery, and mid-century modern accents with blues and oranges transformed this space into a perfect blend of sophistication and cozy family living.',
       },
     ],
