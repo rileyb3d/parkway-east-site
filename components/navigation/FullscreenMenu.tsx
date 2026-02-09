@@ -30,26 +30,27 @@ export default function FullscreenMenu({ onClose }: FullscreenMenuProps) {
       transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
       className="fixed inset-0 z-40 bg-cream"
     >
-      <div className="h-full flex flex-col justify-center px-6 md:px-12 lg:px-20">
-        <nav className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
+      <div className="h-full flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-24">
+        <nav className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20 overflow-visible">
           {/* Main Navigation */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 overflow-visible">
             {menuItems.map((item, index) => (
               <motion.div
                 key={item.href}
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
                 transition={{
                   duration: 0.6,
                   delay: index * 0.08,
                   ease: [0.19, 1, 0.22, 1],
                 }}
+                className="overflow-visible"
               >
                 <Link
                   href={item.href}
                   onClick={onClose}
-                  className="font-serif text-4xl md:text-6xl lg:text-7xl text-charcoal hover:text-stone transition-colors duration-300 block"
+                  className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal hover:text-stone transition-colors duration-300 block leading-tight"
                 >
                   {item.label}
                 </Link>
