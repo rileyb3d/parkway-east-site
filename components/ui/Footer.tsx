@@ -80,12 +80,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-warm-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-sans text-sm text-warm-500">
+        <div className="mt-16 pt-8 border-t border-warm-800">
+          <p className="font-sans text-sm text-warm-500 text-center md:text-left">
             © {new Date().getFullYear()} Parkway East Design. All Rights Reserved.
-          </p>
-          <p className="font-sans text-sm text-warm-500">
-            Site designed with care
           </p>
         </div>
       </div>
