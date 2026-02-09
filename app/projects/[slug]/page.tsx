@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <GhostHeader />
+      <GhostHeader variant="light" />
       
       <main>
         {/* Hero Section */}

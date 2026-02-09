@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <GhostHeader />
+      <GhostHeader variant="light" />
       
       <main>
         {/* Hero Section */}
